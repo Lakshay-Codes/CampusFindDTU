@@ -11,7 +11,7 @@ export default function PostForm({ post }) {
             title: post?.title || "",
             slug: post?.$id || "",
             content: post?.content || "",
-            status: post?.status || "not-found",
+            status: post?.status || "found-item",
         },
     });
     const navigate = useNavigate();
@@ -23,16 +23,16 @@ export default function PostForm({ post }) {
             if(isAuthor){
                 const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
                 
-                if (file) {
+                if (file && post) {
                         appwriteService.deleteFile(post.featuredImage);
-                    }
-            }
-            const dbPost = await appwriteService.updatePost(post.$id, {
-                ...data,
-                featuredImage: file ? file.$id : undefined,
-            });
-            if (dbPost) {
-                navigate(`/post/${dbPost.$id}`);
+                }
+                const dbPost = await appwriteService.updatePost(post.$id, {
+                    ...data,
+                    featuredImage: file ? file.$id : undefined,
+                });
+                if (dbPost) {
+                    navigate(`/post/${dbPost.$id}`);
+                }
             }
         } else {
             const file = await appwriteService.uploadFile(data.image[0]);
