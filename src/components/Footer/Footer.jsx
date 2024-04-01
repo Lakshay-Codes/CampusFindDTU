@@ -4,139 +4,93 @@ import Logo from '../Logo'
 
 function Footer() {
   return (
-    <section className="relative overflow-hidden py-10 bg-gray-400 border border-t-2 border-t-black">
-            <div className="relative z-10 mx-auto max-w-7xl px-4">
-                <div className="-m-6 flex flex-wrap">
-                    <div className="w-full p-6 md:w-1/2 lg:w-5/12">
-                        <div className="flex h-full flex-col justify-between">
-                            <div className="mb-4 inline-flex items-center">
-                                <Logo width="100px" />
-                            </div>
-                            <div>
-                                <p className="text-sm text-gray-600">
-                                    &copy; Copyright 2023. All Rights Reserved by DevUI.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                                Company
-                            </h3>
-                            <ul>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Features
-                                    </Link>
-                                </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Pricing
-                                    </Link>
-                                </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Affiliate Program
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Press Kit
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                                Support
-                            </h3>
-                            <ul>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Account
-                                    </Link>
-                                </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Help
-                                    </Link>
-                                </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Contact Us
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Customer Support
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-3/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                                Legals
-                            </h3>
-                            <ul>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Terms &amp; Conditions
-                                    </Link>
-                                </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Privacy Policy
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Licensing
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+   <footer className="bg-black text-gray-400 py-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8">
+            <div className="text-left flex flex-col">
+            <h2 className="text-white text-lg font-semibold mb-4">Lost and Found Application</h2>
+            <h2 className="text-white text-lg font-semibold mb-4">QuickTip1 :</h2>
+            <p className="mb-4">
+                If you lost your item, post it under Lost Items section by selecting lost-item option
+            </p>
             </div>
-        </section>
+            <div className="text-left flex flex-col">
+            <h2 className="text-white text-lg font-semibold mb-4">Disclaimer : Just a fun project</h2>
+            
+            <h2 className="text-white text-lg font-semibold mb-4">QuickTip2 :</h2>
+            <p className="mb-4">
+                If you found someone&apos;s item, post it under Found Items section by selecting found-item option
+            </p>
+            </div>
+            
+            <div className="flex flex-col text-justify">
+            <h2 className="text-white text-lg font-semibold mb-4">Contact Me</h2>
+            <div className="flex space-x-4">
+                <a
+                target="_blank"
+                href="https://www.linkedin.com/in/lakshay-nijhawan-818419124/"
+                className="hover:text-white transition-colors duration-300"
+                >
+                Linkedin
+                </a>
+                
+            </div>
+            <p>New Delhi, India</p>
+            <p>nijhawanlakshay06@gmail.com</p>
+            <p>Phone: (+91) 8287403276</p>
+            </div>
+            <div className='text-justify'>
+            <h2 className="text-white text-lg font-semibold mb-4">My Coding Profiles</h2>
+            <ul>
+                <li>
+                <a
+                target="_blank"
+                href="https://github.com/Lakshay-Codes"
+                className="hover:text-white transition-colors duration-300"
+                >
+                GitHub
+                </a>
+                </li>
+                <li>
+                <a
+                    target="_blank"
+                    href="https://leetcode.com/nijhawanlakshay06/"
+                    className="hover:text-white transition-colors duration-300"
+                    >
+                    LeetCode
+                </a>
+                </li>
+                <li>
+                <a
+                    target="_blank"
+                    href="https://www.codechef.com/users/nijhawan3codes"
+                    className="hover:text-white transition-colors duration-300"
+                    >
+                    CodeChef
+                </a>
+                </li>
+                <li>
+                <a
+                    target="_blank"
+                    href="https://codeforces.com/profile/Lakshay-Codes"
+                    className="hover:text-white transition-colors duration-300"
+                    >
+                    CodeForces
+                </a>
+                </li>
+                <li>
+                <a
+                    target="_blank"
+                    href="https://auth.geeksforgeeks.org/user/nijhawanlakshay06"
+                    className="hover:text-white transition-colors duration-300"
+                >
+                    GeeksForGeeks
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <p className="text-center text-xs pt-8">Lakshay Nijhawan © 2024. All rights reserved.</p>
+    </footer>
   )
 }
 

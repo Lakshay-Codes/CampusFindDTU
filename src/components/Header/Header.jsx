@@ -15,13 +15,13 @@ function Header() {
       active: true
     }, 
     {
+        name: "Signup",
+        slug: "/signup",
+        active: !authStatus,
+    },
+    {
       name: "Login",
       slug: "/login",
-      active: !authStatus,
-  },
-  {
-      name: "Signup",
-      slug: "/signup",
       active: !authStatus,
   },
   {
@@ -35,7 +35,7 @@ function Header() {
       active: authStatus,
   },
   {
-      name: "Add Post",
+      name: "Post Item",
       slug: "/add-post",
       active: authStatus,
   },
@@ -43,14 +43,15 @@ function Header() {
 
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='py-3 shadow bg-black'>
       <Container>
         <nav className='flex'>
-          <div className='mr-4'>
+          <div className='mr-4 flex'>
             <Link to='/'>
               <Logo width='70px'   />
 
               </Link>
+            <h2 className="text-white text-3xl font-semibold mb-4">CampusFindDTU</h2>
           </div>
           <ul className='flex ml-auto'>
             {navItems.map((item) => 
@@ -58,7 +59,7 @@ function Header() {
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
+                className='inline-block px-6 py-2 duration-200 text-white hover:bg-gray-500 rounded-full'
                 >{item.name}</button>
               </li>
             ) : null
