@@ -11,7 +11,7 @@ function FoundItems() {
         }
     })
   return (
-    <div className='w-full py-8'>
+    <div className='w-full p-60'>
         <Container>
             <div className='flex flex-wrap'>
                 {posts.map((post) => (
