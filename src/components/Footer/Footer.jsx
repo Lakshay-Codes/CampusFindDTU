@@ -18,7 +18,7 @@ function Footer() {
             
             <h2 className="text-white text-lg font-semibold mb-4">QuickTip2 :</h2>
             <p className="mb-4">
-                If you found someone&apos;s item, post it under Found Items section by selecting found-item option
+                If you found someone&apos;s lost item, post it under Found Items section by selecting found-item option
             </p>
             </div>
             

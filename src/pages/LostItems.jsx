@@ -7,7 +7,7 @@ function LostItems() {
     useEffect(() => {}, [])
     appwriteService.getPosts([]).then((posts) => {
         if (posts) {
-            setPosts(posts.documents.filter((post)=>post.status==="not-found"))
+            setPosts(posts.documents.filter((post)=>post.status==="lost-item"))
         }
     })
   return (

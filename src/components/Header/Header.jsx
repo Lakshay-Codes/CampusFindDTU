@@ -15,7 +15,7 @@ function Header() {
       active: true
     }, 
     {
-        name: "Signup",
+        name: "Sign Up",
         slug: "/signup",
         active: !authStatus,
     },
@@ -36,7 +36,7 @@ function Header() {
   },
   {
       name: "Post Item",
-      slug: "/add-post",
+      slug: "/post-item",
       active: authStatus,
   },
   ]

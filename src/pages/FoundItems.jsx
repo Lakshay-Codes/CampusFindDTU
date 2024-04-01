@@ -7,7 +7,7 @@ function FoundItems() {
     useEffect(() => {}, [])
     appwriteService.getPosts([]).then((posts) => {
         if (posts) {
-            setPosts(posts.documents.filter((post)=>post.status==="found"))
+            setPosts(posts.documents.filter((post)=>post.status==="found-item"))
         }
     })
   return (

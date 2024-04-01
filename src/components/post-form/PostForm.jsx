@@ -21,9 +21,9 @@ export default function PostForm({ post }) {
     const submit = async (data) => {
         if (post) {
             if(isAuthor){
-                    const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
-        
-                    if (file) {
+                const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
+                
+                if (file) {
                         appwriteService.deleteFile(post.featuredImage);
                     }
             }
@@ -71,32 +71,36 @@ export default function PostForm({ post }) {
 
     return (
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2 text-white">
+            <div className="w-1/3 px-2 text-white">
                 <Input
-                    label="Title :"
+                    label="Object Lost :"
                     placeholder="Title"
-                    className="mb-4"
+                    className="mb-4 mt-7"
                     {...register("title", { required: true })}
                 />
                 <Input
-                    label="Slug :"
-                    placeholder="Slug"
-                    className="mb-4"
+                    label="Automatic Id :"
+                    placeholder="Id"
+                    className="mb-4 mt-5"
                     {...register("slug", { required: true })}
                     onInput={(e) => {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
                     }}
                 />
-                <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
                 <Input
-                    label="Featured Image :"
+                    label="Must share exact or approximate image of object :"
                     type="file"
-                    className="mb-4"
+                    className="mb-4 mt-7"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image", { required: !post })}
                 />
-            </div>
-            <div className="w-1/3 px-2">
+                <p>Item was lost by you or you found a lost item?&nbsp;</p>
+                <Select
+                    options={["lost-item", "found-item"]}
+                    label="Status"
+                    className="mb-4 mt-7"
+                    {...register("status", { required: true })}
+                />
                 {post && (
                     <div className="w-full mb-4">
                         <img
@@ -106,15 +110,12 @@ export default function PostForm({ post }) {
                         />
                     </div>
                 )}
-                <Select
-                    options={["not-found", "found"]}
-                    label="Status"
-                    className="mb-4"
-                    {...register("status", { required: true })}
-                />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full mt-8">
                     {post ? "Update" : "Submit"}
                 </Button>
+            </div>
+            <div className="w-2/3 px-2 text-white">
+                <RTE label="Share time, location with object description :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
         </form>
     );

@@ -9,12 +9,12 @@ import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 
 
-import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
 import LostItems from "./pages/LostItems";
 import FoundItems from "./pages/FoundItems";
 import Post from "./pages/Post";
+import PostItem from './pages/PostItem.jsx'
 
 const router = createBrowserRouter([
   {
@@ -42,11 +42,11 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "/add-post",
+            path: "/post-item",
             element: (
                 <AuthLayout authentication>
                     {" "}
-                    <AddPost />
+                    <PostItem />
                 </AuthLayout>
             ),
         },
